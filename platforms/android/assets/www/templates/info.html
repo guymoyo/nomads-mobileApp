@@ -1,0 +1,70 @@
+<ion-view title="info">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <div class="bar bar-footer bar-stable">
+  		<a class="button button-clear" title="information" href="#/app/info" ><i class="ion-information-circled" ></i></a>
+ 		 <a class="button button-clear" title="danger" href="#/app/danger" ><i class="ion-alert-circled" ></i></a>
+  		<a class="button button-clear" title="setting"><i class="ion-gear-b"></i></a>
+	</div>
+  
+	  <div ng-controller="InfoListCtrl" >	
+	  	<div class="bar bar-subheader">
+	  		<button class="button button-clear" ng-click="newInfo()">New</button>
+	          <h1 class="title">Nearest Infos</h1>
+		</div>
+	  	<div class="list">
+		
+		    <a class="item item-thumbnail-left" href="#/app/detailinfo">
+		      <img src="img/travel.png">
+		      <h2>Info 1 (desc)</h2>
+		      <p>Nine Inch Nails</p>
+		    </a>
+		
+		    <a class="item item-thumbnail-left" href="#/app/detailinfo">
+		       <img src="img/travel.png">
+		      <h2>Info 2 (desc)</h2>
+		      <p>Nine Inch Nails</p>
+		    </a>
+		    
+		    <a class="item item-thumbnail-left" href="#/app/detailinfo">
+		      <img src="img/travel.png">
+		      <h2>Info 3 (desc)</h2>
+		      <p>Nine Inch Nails</p>
+		    </a>
+		    
+		    <a class="item item-thumbnail-left" href="#/app/detailinfo">
+		       <img src="./img/travel.png">
+		      <h2>Info 4 (desc)</h2>
+		      <p>Nine Inch Nails</p>
+		    </a>
+	
+		</div>
+  	</div>
+</ion-view>
+
+	<script id="newInfo.html" type="text/ng-template">
+      <div id="task-view" class="modal slide-in-up" ng-controller="InfoCtrl">
+        <header class="bar bar-header bar-secondary">
+          <h1 class="title">New Info</h1>
+          <button class="button button-clear button-primary" ng-click="close()">Done</button>
+        </header>
+        <ion-content class="padding has-header">
+          <div class="list">
+  			<label class="item item-input item-floating-label">
+   				 <span class="input-label">title</span>
+   				 <input type="text" placeholder="give a title">
+  			</label>
+  			<label class="item item-input item-floating-label">
+    			<span class="input-label">description</span>
+   				 <input type="text" placeholder="description">
+ 			 </label>
+  			<label class="item item-input item-floating-label">
+   			 	<span class="input-label">...</span>
+    			<input type="text" placeholder="...">
+  			</label>
+		</div>
+		<button class="button button-block button-positive">Submit</button>
+        </ion-content>
+      </div>
+    </script>
